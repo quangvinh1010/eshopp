@@ -54,11 +54,12 @@
                             <button type="button" class="btn btn-sm btn-primary update-btn"><i class="fa fa-check"></i></button>
                         </td>
                         <td class="align-middle">
-                            <form action="{{ url('cart.delete', ['id' => $key]) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button>
-                            </form>
+                        <form action="{{ url('cart.destroy', $key) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button>
+                        </form>
+
                         </td>
                     </tr>
                     @php

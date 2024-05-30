@@ -1,37 +1,40 @@
 @extends('admin.layout')
 
 @section('content')
-<div class="col-md-6 grid-margin stretch-card">
-    <div class="container">
-        <h1>Create Product</h1>
-        <form action="submit_product.php" method="POST">
-            <label for="productName">image</label>
-            <textarea id="productDescription" name="productDescription" rows="1" required></textarea>
-
-            <label for="productDescription">name:</label>
-            <textarea id="productDescription" name="productDescription" rows="1" required></textarea>
-
-            <label for="productCategory">des:</label>
-            <textarea id="productDescription" name="productDescription" rows="1" required></textarea>
-            </select>
-
-            <label for="productPrice">price </label>
-            <textarea id="productDescription" name="productDescription" rows="1" required></textarea>
-
-            <label for="productPrice">quantity </label>
-            <textarea id="productDescription" name="productDescription" rows="1" required></textarea>
-
-            <button type="submit">Create Product</button>
-            <button type="submit">Cancel</button>
-        </form>
-        <form method="POST" action="/admin/products/submit_product">
-    <!-- Your form fields -->
-    <button type="submit">Submit</button>
-</form>
-
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Basic form</h4>
+                <p class="card-description"> Basic form elements </p>
+                <form class="forms-sample" action="{{route('Admin.products.store')}}" method="post">
+                    {{ csrf_field()}}
+                    <div class="form-group">
+                        <label for="exampleInputName1">image</label>
+                        <input name="img" type="text" class="form-control" id="exampleInputName1" placeholder="img">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Name</label>
+                        <input name="name" type="text" class="form-control" id="exampleInputEmail3" placeholder="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">description</label>
+                        <input name="description" type="text" class="form-control" id="exampleInputPassword4" placeholder="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">price</label>
+                        <input name="price" type="text" class="form-control" id="exampleInputPassword4" placeholder="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">quantity</label>
+                        <input name="quantity" type="text" class="form-control" id="exampleInputPassword4" placeholder="quantity">
+                    </div>
+                  
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
-
-
-              
 @endsection

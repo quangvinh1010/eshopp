@@ -24,16 +24,16 @@
                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner bg-light">
                         <div class="carousel-item active">
-                            <img class="w-100 h-100" src="{{ url($product->image) }}" alt="Image">
+                            <img class="w-100 h-100" src="{{ url($product->img) }}" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="{{ url($product->image) }}" alt="Image">
+                            <img class="w-100 h-100" src="{{ url($product->img) }}" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="{{ url($product->image) }}" alt="Image">
+                            <img class="w-100 h-100" src="{{ url($product->img) }}" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="{{ url($product->image) }}" alt="Image">
+                            <img class="w-100 h-100" src="{{ url($product->img) }}" alt="Image">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
@@ -268,7 +268,7 @@
                 <div class="owl-carousel related-carousel">
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ url($product->image) }}" alt="">
+                            <img class="img-fluid w-100" src="{{ url($product->img) }}" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -293,7 +293,7 @@
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ url($product->image) }}" alt="">
+                            <img class="img-fluid w-100" src="{{ url($product->img) }}" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -318,7 +318,7 @@
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ url($product->image) }}" alt="">
+                            <img class="img-fluid w-100" src="{{ url($product->img) }}" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -343,7 +343,7 @@
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ url($product->image) }}" alt="">
+                            <img class="img-fluid w-100" src="{{ url($product->img) }}" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>

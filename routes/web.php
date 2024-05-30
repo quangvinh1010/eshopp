@@ -44,20 +44,22 @@ Route::get('/child', function() {
     return view('child');
 });
 
-// Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
-//     Route::resource('users', AdminUserController::class);
-//     Route::resource('products', AdminProductController::class);
-//     Route::delete('products/{product}', [AdminProductController::class, 'destroy'])->name('products.destroy');
-// });
+route::group(['prefix' => 'admin'], function(){
+    route::resource('home', App\Http\Controllers\Admin\HomeController::class, ['names' =>'Admin.home']);
+    route::resource('users', App\Http\Controllers\Admin\UserController::class, ['names' =>'Admin.users']);
+    route::resource('products', App\Http\Controllers\Admin\ProductController::class,['names'=>'Admin.products']);
+    route::resource('orders', App\Http\Controllers\Admin\OrderController::class,['names'=>'Admin.orders']);
+    route::resource('orderItems', App\Http\Controllers\Admin\OrderItemController::class,['names'=>'Admin.orderItems']);
+    // Route::resource('categories', App\Http\Controllers\admin\CategoryController::class, ['names' => 'Admin.categories']);
+});
 
 // Cart routes
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/page-cart', [CartController::class, 'showCart'])->name('page-cart');
-Route::delete('/delete-cart/{id}', [CartController::class, 'deleteCart'])->name('delete-cart');
+Route::delete('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
 Route::put('/update-cart/{id}', [CartController::class, 'updateCart'])->name('update-cart');
 
 // Checkout routes
 Route::get('/checkout-page', [CartController::class, 'showCartCheckout'])->name('checkout-page');
 Route::post('/checkout', [CheckoutController::class, 'handleCheckout'])->name('checkout');
 // route::resource('products', App\Http\Controllers\Admin\ProductController::class,['names'=>'Admin.products']);
-

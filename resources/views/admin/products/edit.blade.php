@@ -5,31 +5,44 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Edit Product</h4>
-                <p class="card-description">Edit the product details</p>
-                <form class="forms-sample" action="{{ route('admin.products.update', $product->id) }}" method="post">
+                <h4 class="card-title">Basic form</h4>
+                <p class="card-description"> Basic form elements </p>
+                <form class="forms-sample" action="{{route('Admin.products.update',$product->id)}}" method="post">
                     {{ csrf_field() }}
-                    {{ method_field('PUT') }}
-                    <div class="form-group">
-                        <label for="exampleInputImage">Image</label>
-                        <input name="image" value="{{ $product->image }}" type="text" class="form-control" id="exampleInputImage" placeholder="Image">
+                    {{ method_field('PUT')}}
+                    <div class="form-group"> 
+                        <label for="exampleInputName1">Img</label>
+                        <input type="text" value="{{$product->img}}" class="form-control" id="exampleInputName1" name="img" placeholder="name">
+
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputName">Name</label>
-                        <input name="name" value="{{ $product->name }}" type="text" class="form-control" id="exampleInputName" placeholder="Name">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="text" value="{{$product->name}}" class="form-control" id="exampleInputName1" name="name" placeholder="name">
+
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputDescription">Description</label>
-                        <input name="description" value="{{ $product->description }}" type="text" class="form-control" id="exampleInputDescription" placeholder="Description">
+                        <label for="exampleInputEmail3">Description</label>
+                        <input type="description" value="{{$product->description}}" class="form-control" id="exampleInputEmail3" name="description" placeholder="email">
+
+
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPrice">Price</label>
-                        <input name="price" value="{{ $product->price }}" type="text" class="form-control" id="exampleInputPrice" placeholder="Price">
+                        <label for="exampleInputPassword4">Price</label>
+                        <input name="price" value="{{$product->price}}" type="price" class="form-control" id="exampleInputPassword4" placeholder="price">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputQuantity">Quantity</label>
-                        <input name="quantity" value="{{ $product->quantity }}" type="text" class="form-control" id="exampleInputQuantity" placeholder="Quantity">
+                        <label for="exampleInputPassword4">Quantity</label>
+                            <input name="quantity" value="{{$product->quantity}}" type="quantity" class="form-control" id="exampleInputPassword4" placeholder="quantity">
                     </div>
+                    <!-- <div class="form-group">
+                        <label for="exampleSelectGender">Role</label>
+                        <select class="form-control" id="role" name="role">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+
+                    </div> -->
+
                     <button type="submit" class="btn btn-success mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>

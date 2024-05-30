@@ -161,7 +161,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                         <div class="card product-item border-0 mb-4">
                             <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                            <img class="img-fluid w-100" src="{{ url($Products->image)}}" alt="">
+                            <img class="img-fluid w-100" src="{{ url($Products->img)}}" alt="">
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h6 class="text-truncate mb-3">{{$Products->name}}</h6>
@@ -172,7 +172,7 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between bg-light border">
                     <a href="{{route('products.show', $Products ->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    <form id="addToCartForm" method="POST" action="{{ url('page-cart') }}">
+                    <form id="addToCartForm" method="GET" action="{{ url('page-cart') }}">
                         @csrf
                         <!-- Thêm các trường ẩn để truyền product_id và quantity -->
                         <input type="hidden" name="product_id" value="{{ $Products->id }}">
